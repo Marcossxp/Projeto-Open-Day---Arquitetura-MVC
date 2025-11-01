@@ -4,7 +4,7 @@ import pandas as pd
 st.title("Oficina OpenDay ADS")
 
 # Chama a view lista_musicas
-from view.lista_musicas import lista_musicas_view
+from view.lista_musicas import main as mainview
 
 st.set_page_config(
     page_title="lista music",
@@ -15,7 +15,7 @@ st.set_page_config(
 
 def main():
     st.title("App Principal")
-    lista_musicas_view()
+    mainview()
     
 
 if __name__ == "__main__":
