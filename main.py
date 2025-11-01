@@ -1,22 +1,21 @@
-import streamlit as st 
-import pandas as pd
+import streamlit as st
 
-st.title("Oficina OpenDay ADS")
+# Importa a view principal da aplicação
+from view.lista_musicas import main as render_karaoke_page
 
-# Chama a view lista_musicas
-from view.lista_musicas import main as mainview
-
+# Configuração da página
 st.set_page_config(
-    page_title="lista music",
-    page_icon="🎸",
+    page_title="Karaoke Music Application",
+    page_icon="🎤",
     layout="wide",
 )
 
 
 def main():
-    st.title("App Principal")
-    mainview()
-    
+    st.title("Karaoke Music Application")
+    st.caption("Navegue pelo catálogo completo e encontre a próxima música para soltar a voz.")
+    render_karaoke_page()
+
 
 if __name__ == "__main__":
     main()
